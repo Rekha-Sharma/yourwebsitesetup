@@ -14,7 +14,6 @@ class Ticket(models.Model):
         ('complete', 'Complete'),
         ('pending','Pending'),
     )
-
     ticketId  = models.AutoField(primary_key=True)
     title  = models.CharField(max_length=128, default=None ,blank = False)
     description = models.TextField(blank = False, default=None)

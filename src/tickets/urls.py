@@ -6,19 +6,19 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Website Setup API",
+      title="Website Setup",
       default_version='v1',
       description="",
       terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="contact@snippets.local"),
-      license=openapi.License(name="BSD License"),
+      contact=openapi.Contact(email="contact@kynetweb.com"),
+      license=openapi.License(name=""),
    ),
    public=True,
    permission_classes=(permissions.AllowAny,),
 )
 
 urlpatterns = [
-    path('ticket-api-swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('ticket-api/', TicketListView.as_view()),
-    path('ticket-api/<pk>', TicketDetailView.as_view())
+   path('ticket-api-swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+   path('ticket-api/', TicketListView.as_view()),
+   path('ticket-api/<pk>', TicketDetailView.as_view())
 ]
